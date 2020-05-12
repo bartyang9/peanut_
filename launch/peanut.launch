@@ -1,0 +1,11 @@
+<launch>
+<arg name="ns" default="peanut/node"/>
+  <arg name="server" default="localhost"/>
+  <arg name="my_arg" defaut=""/>
+<group ns="$(arg ns)">
+<node machine="$(arg server)" pkg="peanut" name="peanut_node" type="peanut_node" output="screen">
+  <param name="my_arg" type="string" value="$(arg my_arg)"/>
+</node>
+</group>
+</launch>
+
